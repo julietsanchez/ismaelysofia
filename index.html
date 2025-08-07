@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Ismael & Sofia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KxQ4YbsnUvRJvSLF3MI9z4s35TVv6Qyy8xgRrhRCR+muIEXlHY0XYc7o3Hd3i3PCOZuy3zPZ+v+OxVdXMPe5HA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(6px);
+      }
+      60% {
+        transform: translateY(3px);
+      }
+    }
+    /* Animación de respiración lenta y suave */
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow-x: hidden !important;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    section, .container, .modal, .card {
+      max-width: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    img, lottie-player, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      margin: 0 auto;
+      text-align: center;
+    }
+    iframe {
+      max-width: 100%;
+    }
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body style="background-color: #FFFCF6;">
+
+    <!--aqui va el modal -->
+
+    <!-- Sección INICIO -->
+    <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+      <div style="max-width: 400px; width: 100%; margin: 0 auto; text-align: center;">
+        <div style="margin-bottom: 0.1rem;">
+          <img src="assets/img/adorno1.webp" alt="adorno" style="width: 100%; transform: rotate(180deg); margin-top: -25px;">
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="width: 30px; height: 1px; background-color: #d79330;"></span>
+          <p style="font-family: 'La Belle Aurore', cursive; font-size: 1.3rem; color: #7f2f2f; margin: 0;">11.10.25</p>
+          <span style="width: 30px; height: 1px; background-color: #d79330;"></span>
+        </div>
+        <h1 style="font-size: 4rem; margin: 0; font-weight: 400; color: #893E3E;">Ismael</h1>
+        <div style="margin: 0.5rem 0;">
+          <span style="background-color: #D79330; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; font-family: 'Fraunces', cursive; font-size: 2rem;">&</span>
+        </div>
+        <h1 style="font-size: 4rem; margin: 0; font-weight: 400; color: #893E3E;">Sofia</h1>
+        <hr style="width: 40%; margin: 1rem auto; border: 1px solid #d79330;">
+        <div style="font-size: 1.5rem; color: #d79330;">&#10077;</div>
+        <p style="font-family: 'La Belle Aurore', cursive; font-size: 1.2rem; color: #7f2f2f; margin-bottom: 0.1rem; margin-top: 0.1rem;">
+          El amor nos unió,<br>
+          y la familia<br>
+          nos sostiene.
+        </p>
+        <div style="font-size: 1.5rem;color: #d79330;">&#10078;</div>
+      </div>
+      <div style="margin-top: 2rem; display: flex; justify-content: center;">
+        <svg width="36" height="24" viewBox="0 0 24 24" fill="none" stroke="#d79330" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: bounce 1.5s infinite;">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+    <audio id="bgMusic" src="assets/audio/musica.mp3" loop></audio>
+    <button id="muteBtn" onclick="toggleMute()" style="display:none; position: fixed; bottom: 1rem; right: 1rem; background-color: #da8064; color: white; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.2rem; cursor: pointer; z-index: 10000;">
+      <svg id="music-icon" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
+        <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"></path>
+      </svg>
+    </button>
+
+    <script>
+        const modal = document.getElementById('welcomeModal');
+        const music = document.getElementById('bgMusic');
+        const muteBtn = document.getElementById('muteBtn');
+
+        function startWithMusic() {
+            modal.style.display = 'none';
+            music.play();
+            muteBtn.style.display = 'block';
+        }
+
+        function startWithoutMusic() {
+            modal.style.display = 'none';
+        }
+
+        function toggleMute() {
+            if (music.muted) {
+                music.muted = false;
+            } else {
+                music.muted = true;
+            }
+        }
+    </script>
+
+
+<!-- Sección Cuenta Atrás -->
+<section id="cuenta-atras" style="background-image: url('assets/img/contadorfondo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 2rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 30px; position: relative; z-index: 2; box-sizing: border-box;">
+  <div style="position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div style="position: absolute; top: -20px; z-index: 0;">
+    </div>
+    <div style="background: white; border-radius: 50% / 40%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 2rem 1.5rem; z-index: 1; max-width: 360px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+      <h2 style="font-size: 2rem; color: #D79330; margin-bottom: 1.5rem; font-weight: 400;">Faltan</h2>
+      <div id="timer" style="display: flex; justify-content: space-between; gap: 1.2rem; color: #893E3E;">
+        <div>
+          <div style="font-size: 1.8rem;" id="days">00</div>
+          <div style="font-size: 0.9rem; color: #d79330;">Días</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem;" id="hours">00</div>
+          <div style="font-size: 0.9rem; color: #d79330;">Hs.</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem;" id="minutes">00</div>
+          <div style="font-size: 0.9rem; color: #d79330;">Min.</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem;" id="seconds">00</div>
+          <div style="font-size: 0.9rem; color: #d79330;">Seg.</div>
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <svg width="40" height="40" viewBox="-25 -25 50 50" xmlns="http://www.w3.org/2000/svg" style="animation: heartbeat 2s infinite ease-in-out;">
+          <path fill="rgb(215,147,48)" fill-opacity="1" d=" M-1.1369999647140503,15.593999862670898 C-0.7720000147819519,15.741999626159668 -0.38600000739097595,15.815999984741211 0.0010000000474974513,15.815999984741211 C0.3869999945163727,15.815999984741211 0.7730000019073486,15.741999626159668 1.1369999647140503,15.593999862670898 C1.8550000190734863,15.300999641418457 18.725000381469727,8.284000396728516 18.725000381469727,-4.073999881744385 C18.725000381469727,-10.550000190734863 13.385000228881836,-15.815999984741211 6.820000171661377,-15.815999984741211 C4.349999904632568,-15.815999984741211 1.9789999723434448,-15.067000389099121 0.0010000000474974513,-13.70199966430664 C-1.9780000448226929,-15.067000389099121 -4.348999977111816,-15.815999984741211 -6.817999839782715,-15.815999984741211 C-13.383999824523926,-15.815999984741211 -18.725000381469727,-10.550000190734863 -18.725000381469727,-4.073999881744385 C-18.725000381469727,8.284000396728516 -1.8550000190734863,15.300999641418457 -1.1369999647140503,15.593999862670898z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Sección Ceremonia -->
+<section id="ceremonia" class="section-bg" style="padding: 2rem 1rem; text-align: center; font-family: 'Fraunces', serif; color: #893E3E; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+    <div style="max-width: 480px; margin: 0 auto; text-align: center;">
+      <div style="background-color: #F7F3E4; border-radius: 50%; width: 140px; height: 140px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);">
+        <lottie-player src="assets/img/anillos.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 140px; max-height: 140px;" loop autoplay></lottie-player>
+      </div>
+      <div style="display: inline-flex; align-items: center; margin-bottom: 1.5rem;">
+        <img src="assets/img/antes.svg" alt="cinta izquierda" style="height: 48px; max-width: 48px;">
+        <div style="background-color: #d79330; color: white; font-family: 'La Belle Aurore', cursive; font-size: 2.2rem; padding: 0.5rem 1.5rem; display: inline-block; letter-spacing: 1px;">
+          Ceremonia
+        </div>
+        <img src="assets/img/despues.svg" alt="cinta derecha" style="height: 48px; max-width: 48px;">
+      </div>
+      <p style="font-size:1.2rem ; font-family: 'La Belle Aurore' ; color: #8f8f8f; font-style: normal; margin-bottom: 1.2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+        Nos encantaría que nos acompañes desde el momento más especial:<br>
+        <strong>La ceremonia religiosa.</strong><br><br>
+        Tu presencia ahí es lo que más valoramos en este día tan importante para nosotros.
+      </p>
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Día</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;">Sábado 11 de Octubre - 21:30hs.</p>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Casamiento+Ismael+y+Sofia+-+Ceremonia&dates=20251011T213000/20251011T233000&details=Ceremonia+religiosa+del+casamiento+de+Ismael+y+Sofia&location=Parroquia+Inmaculada+Concepción,+Av.+Leandro+N.+Alem+738,+Tafí+Viejo&sf=true&output=xml" 
+         target="_blank" 
+         style="display: inline-block; background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; max-width: 240px; width: 100%; padding: 0.8rem 0; margin-bottom: 1.2rem; box-shadow: 0 3px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center; text-decoration: none;">
+        AGENDAR
+      </a>
+  
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Lugar</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;">Parroquia Inmaculada Concepción</p>
+  
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Dirección</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;">Av. Leandro N. Alem 738 <br> Tafí Viejo</p>
+      <button onclick="openMapModal()" style="background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; max-width: 240px; width: 100%; padding: 0.8rem 0; margin-bottom: 1.2rem; box-shadow: 0 3px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+        ¿CÓMO LLEGAR?
+      </button>
+    </div>
+</section>
+<!-- Modal Mapa -->
+<div id="mapModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 90%; max-width: 400px; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeMapModal()" style="position: absolute; top: -12px; right: -4px; background-color: #d79330; border: none; border-radius: 50%; width: 28px; height: 28px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif;">X</button>
+    <h3 style="color: #da8064; font-size: 1.3rem; margin-bottom: 1rem; font-family: 'La Belle Aurore', cursive;">¿Cómo llegar a la Ceremonia?</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.697841515317!2d-65.26661332371487!3d-26.7326100767259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ead5549aa7700f2!2sParroquia%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2$ar!4v1691538999999!5m2!1ses!2$ar" 
+      width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a href="https://www.google.com/maps/place/Parroquia+Inmaculada+Concepci%C3%B3n/data=!4m2!3m1!1s0x0:0x7ead5549aa7700f2?sa=X&ved=1t:2428&ictx=111" 
+       target="_blank" 
+       style="margin-top: 1rem; display: inline-block; background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; width: 200px; padding: 0.6rem 0; text-align: center; text-decoration: none;">
+      Abrir GPS
+    </a>
+  </div>
+</div>
+<!-- Sección Fiesta -->
+<section id="Fiesta" class="section-bg" style="position: relative; padding: 2rem 1rem; text-align: center; font-family: 'Fraunces', serif; color: #893E3E; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+    <div style="max-width: 480px; margin: 0 auto; text-align: center;">
+      <div style="background-color: #F7F3E4; border-radius: 50%; width: 140px; height: 140px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);">
+        <lottie-player src="assets/img/fiesta.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 140px; max-height: 140px;" loop autoplay></lottie-player>
+      </div>
+      <div style="display: inline-flex; align-items: center; margin-bottom: 1.5rem;">
+        <img src="assets/img/antes.svg" alt="cinta izquierda" style="height: 48px; max-width: 48px;">
+        <div style="background-color: #d79330; color: white; font-family: 'La Belle Aurore', cursive; font-size: 2.2rem; padding: 0.5rem 1.5rem; display: inline-block; letter-spacing: 1px;">
+          Fiesta
+        </div>
+        <img src="assets/img/despues.svg" alt="cinta derecha" style="height: 48px; max-width: 48px;">
+      </div>
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Día</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;">Sábado 11 de Octubre - 22:00hs.</p>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Casamiento+Ismael+y+Sofia+-+Fiesta&dates=20251011T220000/20251012T010000&details=Casamiento+Ismael+y+Sofia+-+Fiesta+en+Quinta+El+Pacará+3,+Tucumán&location=Quinta+El+Pacará+3+Tucumán&sf=true&output=xml"
+         target="_blank"
+         style="display: inline-block; background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; max-width: 240px; width: 100%; padding: 0.8rem 0; margin-bottom: 1.2rem; box-shadow: 0 3px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center; text-decoration: none;">
+        AGENDAR
+      </a>
+  
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Lugar</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;">Quinta El Pacará 3</p>
+      <button onclick="document.getElementById('confirmarModal').style.display = 'flex';" style="background-color: #da8064; color: white; font-size: 1.1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; max-width: 260px; width: 100%; padding: 1.05rem 0; margin-bottom: 1.2rem; box-shadow: 0 3px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+        CONFIRMAR ASISTENCIA
+      </button>
+      <h3 style="font-size: 1.6rem; font-weight: 500;">Dirección</h3>
+      <p style="font-size: 1rem; margin-bottom: 1rem;"> Tafí Viejo </p>
+      <button onclick="document.getElementById('mapModalfiesta').style.display = 'flex';" style="background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; max-width: 240px; width: 100%; padding: 0.8rem 0; margin-bottom: 1.2rem; box-shadow: 0 3px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+        ¿CÓMO LLEGAR?
+      </button>
+    </div>
+    <div id="floralBackground" style="position: absolute; left: -100px; top: 400px; width: 260px; height: 360px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg);">
+      <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 260px; max-height: 360px;" loop autoplay></lottie-player>
+    </div>
+  </section>
+</section>
+
+<!-- Modal Mapa de fiesta -->
+<div id="mapModalfiesta" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 90%; max-width: 400px; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeMapModal()" style="position: absolute; top: -12px; right: -4px; background-color: #d79330; border: none; border-radius: 50%; width: 28px; height: 28px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif;">X</button>
+    <h3 style="color: #da8064; font-size: 1.3rem; margin-bottom: 1rem; font-family: 'La Belle Aurore', cursive;">¿Cómo llegar a la Fiesta?</h3>
+    <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.3083568930514!2d-65.2447479!3d-26.7620897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942267808462f1c3%3A0xa8530257aae433e5!2sQuinta%20el%20pacar%C3%A1%203!5e0!3m2!1ses-419!2sar!4v1723050000000!5m2!1ses-419!2sar" 
+  width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    <a href="https://www.google.com/maps/place/Quinta+el+pacar%C3%A1+3/@-26.7620924,-65.2421793,17z/data=!3m1!4b1!4m6!3m5!1s0x942267808462f1c3:0xa8530257aae433e5!8m2!3d-26.7620924!4d-65.2421793!16s%2Fg%2F11byw3j7d9?entry=ttu&amp;g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+       target="_blank"
+       style="margin-top: 1rem; display: inline-block; background-color: #da8064; color: white; font-size: 1rem; font-family: 'Fraunces', serif; border: none; border-radius: 30px; width: 200px; padding: 0.6rem 0; text-align: center; text-decoration: none;">
+      Abrir GPS
+    </a>
+  </div>
+</div>
+
+<!-- Modal Confirmar Asistencia -->
+<div id="confirmarModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeConfirmarModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;">X</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScRg99pBU7JChQlPxRbBK0ieKILvx6F-IgfDM23qlCyBMbQzQ/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </div>
+</div>
+<script>
+  const targetDate = new Date("2025-10-11T22:00:00"); // Fecha del evento
+  const timer = () => {
+    const now = new Date();
+    const difference = targetDate - now;
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    document.getElementById("days").textContent = String(days).padStart(2, "0");
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+  };
+
+  setInterval(timer, 1000);
+
+  function openMapModal() {
+    document.getElementById("mapModal").style.display = "flex";
+  }
+
+  function closeMapModal() {
+    const modalCeremonia = document.getElementById("mapModal");
+    const modalFiesta = document.getElementById("mapModalfiesta");
+    if (modalCeremonia) modalCeremonia.style.display = "none";
+    if (modalFiesta) modalFiesta.style.display = "none";
+  }
+
+  function closeConfirmarModal() {
+    const modalConfirmar = document.getElementById("confirmarModal");
+    if (modalConfirmar) modalConfirmar.style.display = "none";
+  }
+
+  // Animación floral: aparición simple según visibilidad de la sección Fiesta
+  window.addEventListener('scroll', function () {
+    const fiestaSection = document.getElementById('Fiesta');
+    const floralAnim = document.getElementById('floralBackground');
+    const rect = fiestaSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      floralAnim.style.opacity = '0.5';
+    } else {
+      floralAnim.style.opacity = '0';
+    }
+  });
+</script>
+</section>
+
+<!-- Sección: Cards -->
+<section id="cards" class="section-bg" style="padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+  <div id="floralBackgroundCards" style="position: absolute; right: -100px; top: 1650px; width: 260px; height: 360px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg) scaleY(-1);">
+    <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 260px; max-height: 360px;" loop autoplay></lottie-player>
+  </div>
+  <div class="container px-3" style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center; box-sizing: border-box;">
+    <div class="text-center mb-4">
+      <div style="position: relative; width: 100%; height: 0;">
+        <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; z-index: 1;">
+          <lottie-player src="assets/img/confeti.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        </div>
+      </div>
+      <h2 class="section-title">Fiesta</h2>
+      <p class="section-subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+    </div>
+    <!-- Card Música -->
+    <div class="card-custom card-musica content-item-fiesta"
+      style="background-color: #faf2e9; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 0 auto 1.2rem auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px;">
+      <h3 style="font-family: 'Fraunces',  serif; font-size: 2rem; color:  #7d2e1d; margin-bottom: 5px; font-weight: 400; text-align: center;">Música</h3>
+      <lottie-player src="assets/img/musica.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
+      <div class="card-text" style="text-align: center; padding: 0 1rem; word-break: break-word; max-width: 100%; width: 100%;">
+        <p class="card-musica-text"
+           style="font-family: 'Fraunces', serif; color: #7d2e1d; margin-bottom: 1rem; max-width: 100%; word-break: break-word; margin-left: auto; margin-right: auto; text-align: center;">
+          ¿Cuál es la canción que <br>no debe faltar en la PlayList <br>de la fiesta?
+        </p>
+      </div>
+      <div class="d-flex justify-content-center gap-2" style="width: 100%; flex-wrap: wrap;">
+        <button class="custom-card-btn mx-auto d-block" style="text-align: center; max-width: 250px; width: 100%; margin-bottom: 0.5rem;" onclick="document.getElementById('sugerir').style.display = 'flex';">Sugerir canción</button>
+        <button class="custom-card-btn mx-auto d-block" style="text-align: center; max-width: 250px; width: 100%;" onclick="window.open('https://open.spotify.com/playlist/6SUGJGmHKo40xFJ6NeB0Fr', '_blank')">Playlist de Spotify</button>
+      </div>
+    </div>
+
+    <!-- Card dresscode -->
+    <div class="card-custom card-dresscode content-item-fiesta d-flex flex-column justify-content-between align-items-center mx-auto"
+      style="background-color: #faf2e9; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 1.2rem 1rem; text-align: center; max-width: 340px; width: 100%; margin: 0 auto;">
+<style>
+  /* Ensure vertical spacing between cards in #cards section */
+  #cards .card-custom + .card-custom {
+    margin-top: 1.2rem !important;
+  }
+  /* Keep cards centered and max-width on all screens */
+  #cards .card-custom {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 360px;
+    width: 100%;
+  }
+  @media (max-width: 576px) {
+    #cards .card-custom {
+      max-width: 90vw;
+    }
+  }
+  /* Fondo para secciones excepto inicio */
+  .section-bg {
+    background-color: #FFFCF6;
+  }
+</style>
+      <h3 style="font-family: 'Fraunces',  serif; font-size: 2rem; color:  #7d2e1d; margin-bottom: 5px; font-weight: 400;">Dress Code</h3>
+      <lottie-player src="assets/img/shirt.json" background="transparent" speed="1" style="width: 100%; max-width: 100px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
+      <p style="font-family: 'Fraunces', serif; color: #7d2e1d; font-weight: 800;">Formal Etiqueta</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap card-buttons-group">
+      </div>
+    </div>
+  </div>
+  
+</section>
+</section>
+<!-- Sección Regalos -->
+<section id="regalos" style="background-color: #FFFCF6; padding: 2rem 1rem; position: relative; text-align: center; margin-top: 0; box-sizing: border-box;">
+  <div class="container" style="margin: 0 auto; text-align: center;">
+    <h2 class="text-center mb-3" style="font-family: 'Fraunces', serif; color: #7d2e1d; font-weight: 400; font-size: 25.6px;">Regalos</h2>
+    <p class="text-center" style="font-family: 'La Belle Aurore', cursive; color: #DA8064; font-size: 1.2rem;">¡Nuestro mayor regalo es compartir este día con vos!</p>
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.2rem;">
+      <lottie-player src="assets/img/regalo.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto;" loop autoplay></lottie-player>
+    </div>
+    <p style="font-family: 'La Belle Aurore', cursive; color: #7c7c7c;">
+      Si querés ayudarnos a construir nuestro hogar, podés hacerlo con una transferencia.<br>
+      ¡Gracias por ser parte de este sueño!
+    </p>
+    <div class="text-center mt-3">
+      <button onclick="document.getElementById('regalosModal').style.display='block'" class="btn btn-custom" style="max-width: 250px; width: 100%; margin: 0 auto;">DATOS BANCARIOS</button>
+    </div>
+  </div>
+  <!-- Modal Regalos visual style -->
+  <div id="regalosModal" class="modal fade show" tabindex="100" style="display: none;" aria-modal="true" role="dialog">
+    <div class="modal-backdrop fade show" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1040;"></div>
+    <div class="modal-dialog" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; display: flex; flex-direction: column; align-items: center;">
+      <div class="modal-content" style="background-color: #fffaf0; border-radius: 24px; padding: 2rem 1.5rem; max-width: 300px; width: 90vw; box-shadow: 0 0 20px rgba(0,0,0,0.2); text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <button onclick="closeRegalosModal()" style="position: absolute; top: 12px; right: 12px; background-color: #D79330; border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; cursor: pointer; z-index: 2;">×</button>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; text-align: center;">
+          <h2 style="font-family: 'Fraunces', serif; color: #722D27; font-size: 1.5rem; margin-bottom: 1rem; margin-top: 0; text-align: center; width: 100%;">Transferencias</h2>
+          <p style="color: #722D27; font-size: 1rem; text-align: center; width: 100%;">CBU: 0720069488000005057968<br>ALIAS: ISMAEL.TEVEZ</p>
+        </div>
+        <button class="btn btn-custom mt-3" id="copyCbuBtn" style="max-width: 200px; width: 100%; margin: 0 auto;">Copiar CBU</button>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Sección Instagram estilo fondo con imagen -->
+<section id="instagram" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-position: center; padding: 4rem 1rem; text-align: center; color: #4A1D18; margin-top: 10; box-sizing: border-box;">
+    <h2 style="font-family: 'Fraunces', serif; font-size: 1.8rem; margin-bottom: 10px;">Compartimos este día junto a vos</h2>
+    <p style="font-family: 'La Belle Aurore', cursive; color: #C46C54; font-size: 1.2rem; margin-bottom: 30px;">
+      Compartí tus fotos y videos de este hermoso día
+    </p>
+    <div style="margin-bottom: 20px; display: flex; justify-content: center; align-items: center;">
+      <lottie-player src="assets/img/instagram.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto;" loop autoplay></lottie-player>
+    </div>
+    <h3 style="font-size: 1.5rem; color: #E2962F; font-weight: bold; margin-bottom: 20px;">#ismaelysofia</h3>
+    <a href="https://www.instagram.com/explore/tags/ismaelysofia/" target="_blank" class="btn-custom btn-instagram" style="max-width: 250px; width: 100%; margin: 0 auto;">VER EN INSTAGRAM</a>
+  </section> 
+<style>
+  .custom-card-btn {
+    background-color: #da8064;
+    color: white;
+    font-family: 'Fraunces', serif;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    min-width: 180px;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.08);
+    transition: background 0.15s;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .custom-card-btn:hover, .custom-card-btn:focus {
+    background-color: #c36e55;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Extra margin for the second button in card */
+  .card-buttons-group .custom-card-btn.card-btn-margin {
+    margin-top: 0.75rem;
+  }
+  .card-custom {
+    border-radius: 24px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06) !important;
+    background: #F9F2E5;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif; 
+    font-size: 2rem;
+    color: #6d2d2f;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+  }
+  .section-subtitle {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1.2rem;
+    color: #8f8f8f;
+    margin-top: 0.3rem;
+    margin-bottom: 0.7rem;
+    font-weight: 400;
+  }
+  @media (max-width: 576px) {
+    .card-musica, .card-dresscode, .content-item-fiesta {
+      max-width: 85% !important;
+      width: 85vw !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section, .container, .modal, .card {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.btn {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.d-flex {
+  flex-wrap: wrap;
+}
+
+.modal-fade {
+  width: 100vw;
+  left: 0 !important;
+}
+  .card-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #da8064;
+    color: #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    height: 48px;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+    margin: 0 auto 0.3rem auto;
+  }
+.btn-custom.card-button:hover,
+.btn-custom.card-button:focus {
+  background-color: #c36e55;
+  color: #fff;
+  text-decoration: none;
+}
+/* Reduce vertical spacing for all major sections */
+section, .cards-section, .section {
+  margin-top: 0 !important;
+  margin-bottom: 30px !important;
+}
+/* Reduce Bootstrap margin classes if used */
+.mt-5, .mb-5 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+</style>
+<style>
+  .btn-custom {
+    background-color: #DA8064;
+    color: white;
+    font-family: 'Fraunces', serif;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-custom:hover {
+    background-color: #c56f55;
+  }
+</style>
+<style>
+  .custom-btn {
+    background-color: #da8064;
+    color: white;
+    font-family: 'Fraunces', serif;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.08);
+    transition: background 0.15s;
+    width: auto;
+    max-width: 100%;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .custom-btn:hover, .custom-btn:focus {
+    background-color: #c36e55;
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
+<style>
+  .btn-instagram {
+    text-decoration: none !important;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+</style>
+
+</section>
+
+<!-- Modal Sugerir Canción-->
+<div id="sugerir" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+    <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+      <button onclick="closeSugerirModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;" >X</button>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQhWlBKa-esPpjvwH7RpP0va5ITcUDhzgR1gcpdbZIVyJ-6A/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+</div>
+
+<script>
+  function closeSugerirModal() {
+    const modal = document.getElementById("sugerir");
+    if (modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+
+</section>
+
+<script>
+  function closeRegalosModal() {
+    document.getElementById("regalosModal").style.display = "none";
+  }
+</script>
+<script>
+  document.getElementById("copyCbuBtn").addEventListener("click", function() {
+    const cbu = "0720069488000005057968";
+    navigator.clipboard.writeText(cbu).then(function() {
+      alert("CBU copiado al portapapeles");
+    }, function(err) {
+      alert("Error al copiar el CBU");
+    });
+  });
+</script>
+</body>
+<style>
+  /* --------- MODAL STYLES --------- */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+  }
+  .modal-content {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    top: 20%;
+    border-radius: 12px;
+    background: #fff;
+    padding: 1rem;
+    position: relative;
+    z-index: 1050;
+    text-align: center;
+    box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+  .modal-close {
+    position: absolute;
+    top: -12px;
+    right: -4px;
+    background-color: #d79330;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-size: 1.2rem;
+    z-index: 1060;
+  }
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 90%;
+      width: auto;
+      top: 25%;
+      padding: 1rem;
+    }
+  }
+  /* Remove top margin/padding from first content element */
+#inicio, #inicio:first-child, section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+  /* Extra: ensure music card text wraps and centers */
+  .card-musica {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem;
+    overflow-wrap: break-word;
+  }
+
+  .card-musica button {
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .content-item-fiesta {
+    max-width: 320px !important;
+    width: 90% !important;
+    margin: 0 auto 1.2rem auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+    padding: 1.5rem 1rem !important;
+    overflow-wrap: break-word !important;
+  }
+  .card-musica-text,
+  .card-musica p,
+  .card-musica .text-center,
+  .content-item-fiesta p,
+  .content-item-fiesta button {
+    max-width: 100%;
+    word-break: break-word;
+    margin: 0 auto;
+    text-align: center !important;
+    white-space: normal !important;
+    width: auto !important;
+  }
+  .card-musica .card-text,
+  .content-item-fiesta .card-text {
+    text-align: center !important;
+    padding: 0 1rem !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  @media (max-width: 576px) {
+    .card-musica, .card-dresscode, .content-item-fiesta {
+      max-width: 85vw !important;
+      width: 85vw !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .card-musica .card-text,
+    .content-item-fiesta .card-text {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+</style>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</html>
