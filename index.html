@@ -182,13 +182,22 @@
         const muteBtn = document.getElementById('muteBtn');
 
         function startWithMusic() {
-            modal.style.display = 'none';
-            music.play();
-            muteBtn.style.display = 'block';
+          modal.style.display = 'none';
+          music.play();
+          muteBtn.style.display = 'block';
+          scrollToInicio();
         }
 
         function startWithoutMusic() {
-            modal.style.display = 'none';
+          modal.style.display = 'none';
+          scrollToInicio();
+        }
+
+        function scrollToInicio() {
+          const inicioSection = document.getElementById('inicio');
+          if (inicioSection) {
+            inicioSection.scrollIntoView({ behavior: 'smooth' });
+          }
         }
 
         function toggleMute() {
