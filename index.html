@@ -10,70 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KxQ4YbsnUvRJvSLF3MI9z4s35TVv6Qyy8xgRrhRCR+muIEXlHY0XYc7o3Hd3i3PCOZuy3zPZ+v+OxVdXMPe5HA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(6px);
-      }
-      60% {
-        transform: translateY(3px);
-      }
-    }
-    /* Animación de respiración lenta y suave */
-    @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      overflow-x: hidden !important;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    body {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    *, *:before, *:after {
-      box-sizing: border-box;
-    }
-    section, .container, .modal, .card {
-      max-width: 100%;
-      overflow-x: hidden;
-      box-sizing: border-box;
-    }
-    img, lottie-player, video {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    .container {
-      margin: 0 auto;
-      text-align: center;
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    iframe {
-      max-width: 100%;
-    }
-    @media (max-width: 576px) {
-      body,
-      .container,
-      .main-wrapper,
-      .content-wrapper {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-    }
-  </style>
+</head>
 </head>
 <body style="background-color: #FFFCF6;">
     <!-- Cartel solo visible en Desktop -->
@@ -85,44 +22,6 @@
   
   <!-- Contenido real solo visible en Mobile -->
   <div class="only-mobile">
-    <!-- Todo tu código actual va dentro de este div -->
-    <!-- ... -->
-  </div>
-  <style>/* Por defecto, oculta todo el contenido de mobile */
-    .only-mobile {
-      display: none !important;
-    }
-    
-    /* Muestra el cartel en desktop */
-    .only-desktop {
-      display: block !important;
-    }
-    
-    .desktop-message {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
-      background-color: #fff8f0;
-      color: #333;
-      font-family: 'Fraunces', serif;
-      font-size: 1.8rem;
-    }
-    
-    /* En pantallas móviles, ocultamos el cartel y mostramos el contenido real */
-    @media screen and (max-width: 768px) {
-      .only-mobile {
-        display: block !important;
-      }
-    
-      .only-desktop {
-        display: none !important;
-      }
-    }
-    }</style>
-
 <div id="welcomeModal" style="position: fixed; z-index: 9999; inset: 0; background-color: #fdf4e7; overflow-y: auto; display: flex; justify-content: center; align-items: center; padding: 2rem; text-align: center;">
     <div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 20rem;">
         <span style="font-family: 'La Belle Aurore', cursive; font-size: 1.5rem; ; color: #bb5d45;">Bienvenidos <br> a la invitación de</span>
@@ -136,8 +35,6 @@
         </div>
     </div>
 </div>
-
-
     <!-- Sección INICIO -->
     <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
       <div style="max-width: 400px; width: 100%; margin: 0 auto; text-align: center;">
@@ -326,11 +223,10 @@
         ¿CÓMO LLEGAR?
       </button>
     </div>
-    <div id="floralBackground" style="position: absolute; left: -100px; top: 400px; width: 260px; height: 360px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg);">
-      <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 260px; max-height: 360px;" loop autoplay></lottie-player>
+    <div id="floralBackground" style="position: absolute; left: -50px; top: 400px; width: 200px; height: 280px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg);">
+      <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 200px; max-height: 280px;" loop autoplay></lottie-player>
     </div>
   </section>
-</section>
 
 <!-- Modal Mapa de fiesta -->
 <div id="mapModalfiesta" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
@@ -409,14 +305,14 @@
 
 <!-- Sección: Cards -->
 <section id="cards" class="section-bg" style="padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
-  <div id="floralBackgroundCards" style="position: absolute; right: -100px; top: 1650px; width: 260px; height: 360px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg) scaleY(-1);">
-    <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 260px; max-height: 360px;" loop autoplay></lottie-player>
+  <div id="floralBackgroundCards" style="position: absolute; right: -50px; top: 1650px; width: 200px; height: 280px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg) scaleY(-1);">
+    <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 200px; max-height: 280px;" loop autoplay></lottie-player>
   </div>
   <div class="container px-3" style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center; box-sizing: border-box;">
     <div class="text-center mb-4">
       <div style="position: relative; width: 100%; height: 0;">
-        <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; z-index: 1;">
-          <lottie-player src="assets/img/confeti.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 250px; height: 250px; z-index: 1;">
+          <lottie-player src="assets/img/confeti.json" background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
         </div>
       </div>
       <h2 class="section-title">Fiesta</h2>
@@ -442,28 +338,6 @@
     <!-- Card dresscode -->
     <div class="card-custom card-dresscode content-item-fiesta d-flex flex-column justify-content-between align-items-center mx-auto"
       style="background-color: #faf2e9; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 1.2rem 1rem; text-align: center; max-width: 340px; width: 100%; margin: 0 auto;">
-<style>
-  /* Ensure vertical spacing between cards in #cards section */
-  #cards .card-custom + .card-custom {
-    margin-top: 1.2rem !important;
-  }
-  /* Keep cards centered and max-width on all screens */
-  #cards .card-custom {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 360px;
-    width: 100%;
-  }
-  @media (max-width: 576px) {
-    #cards .card-custom {
-      max-width: 90vw;
-    }
-  }
-  /* Fondo para secciones excepto inicio */
-  .section-bg {
-    background-color: #FFFCF6;
-  }
-</style>
       <h3 style="font-family: 'Fraunces',  serif; font-size: 2rem; color:  #7d2e1d; margin-bottom: 5px; font-weight: 400;">Dress Code</h3>
       <lottie-player src="assets/img/shirt.json" background="transparent" speed="1" style="width: 100%; max-width: 100px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
       <p style="font-family: 'Fraunces', serif; color: #7d2e1d; font-weight: 800;">Formal Etiqueta</p>
@@ -517,7 +391,174 @@
     <h3 style="font-size: 1.5rem; color: #E2962F; font-weight: bold; margin-bottom: 20px;">#ismaelysofia</h3>
     <a href="https://www.instagram.com/explore/tags/ismaelysofia/" target="_blank" class="btn-custom btn-instagram" style="max-width: 250px; width: 100%; margin: 0 auto;">VER EN INSTAGRAM</a>
   </section> 
+  </div>
+
+<!-- Modal Sugerir Canción-->
+<div id="sugerir" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+    <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+      <button onclick="closeSugerirModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;" >X</button>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQhWlBKa-esPpjvwH7RpP0va5ITcUDhzgR1gcpdbZIVyJ-6A/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+</div>
+
+<script>
+  function closeSugerirModal() {
+    const modal = document.getElementById("sugerir");
+    if (modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+</section>
+
+<script>
+  function closeRegalosModal() {
+    document.getElementById("regalosModal").style.display = "none";
+  }
+</script>
+<script>
+  document.getElementById("copyCbuBtn").addEventListener("click", function() {
+    const cbu = "0720069488000005057968";
+    navigator.clipboard.writeText(cbu).then(function() {
+      alert("CBU copiado al portapapeles");
+    }, function(err) {
+      alert("Error al copiar el CBU");
+    });
+  });
+</script>
+</body>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</html>
+
+
+<!-- Consolidated Styles -->
 <style>
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(6px);
+    }
+    60% {
+      transform: translateY(3px);
+    }
+  }
+  /* Animación de respiración lenta y suave */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100vw;
+  }
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  section, .container, .modal, .card {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  img, lottie-player, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  iframe {
+    max-width: 100%;
+  }
+  @media (max-width: 576px) {
+    body,
+    .container,
+    .main-wrapper,
+    .content-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    #floralBackground,
+    #floralBackgroundCards {
+      display: none !important;
+    }
+  }
+  /* Por defecto, oculta todo el contenido de mobile */
+  .only-mobile {
+    display: none !important;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  /* Muestra el cartel en desktop */
+  .only-desktop {
+    display: block !important;
+  }
+  .desktop-message {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff8f0;
+    color: #333;
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+  }
+  /* En pantallas móviles, ocultamos el cartel y mostramos el contenido real */
+  @media screen and (max-width: 768px) {
+    .only-mobile {
+      display: block !important;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    .only-desktop {
+      display: none !important;
+    }
+  }
+  /* Ensure vertical spacing between cards in #cards section */
+  #cards .card-custom + .card-custom {
+    margin-top: 1.2rem !important;
+  }
+  /* Keep cards centered and max-width on all screens */
+  #cards .card-custom {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 360px;
+    width: 100%;
+  }
+  @media (max-width: 576px) {
+    #cards .card-custom {
+      max-width: 90vw;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  /* Fondo para secciones excepto inicio */
+  .section-bg {
+    background-color: #FFFCF6;
+  }
   .custom-card-btn {
     background-color: #da8064;
     color: white;
@@ -576,46 +617,19 @@
       margin-right: auto !important;
     }
   }
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: hidden;
-  width: 100%;
-}
-body {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-section, .container, .modal, .card {
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-iframe {
-  max-width: 100%;
-}
-
-.btn {
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.d-flex {
-  flex-wrap: wrap;
-}
-
-.modal-fade {
-  width: 100vw;
-  left: 0 !important;
-}
+  .btn {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .d-flex {
+    flex-wrap: wrap;
+  }
+  .modal-fade {
+    width: 100vw;
+    left: 0 !important;
+  }
   .card-button {
     width: 100%;
     max-width: 250px;
@@ -635,24 +649,22 @@ iframe {
     transition: background 0.15s;
     margin: 0 auto 0.3rem auto;
   }
-.btn-custom.card-button:hover,
-.btn-custom.card-button:focus {
-  background-color: #c36e55;
-  color: #fff;
-  text-decoration: none;
-}
-/* Reduce vertical spacing for all major sections */
-section, .cards-section, .section {
-  margin-top: 0 !important;
-  margin-bottom: 30px !important;
-}
-/* Reduce Bootstrap margin classes if used */
-.mt-5, .mb-5 {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-</style>
-<style>
+  .btn-custom.card-button:hover,
+  .btn-custom.card-button:focus {
+    background-color: #c36e55;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Reduce vertical spacing for all major sections */
+  section, .cards-section, .section {
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  /* Reduce Bootstrap margin classes if used */
+  .mt-5, .mb-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
   .btn-custom {
     background-color: #DA8064;
     color: white;
@@ -667,8 +679,6 @@ section, .cards-section, .section {
   .btn-custom:hover {
     background-color: #c56f55;
   }
-</style>
-<style>
   .custom-btn {
     background-color: #da8064;
     color: white;
@@ -693,8 +703,6 @@ section, .cards-section, .section {
     color: #fff;
     text-decoration: none;
   }
-</style>
-<style>
   .btn-instagram {
     text-decoration: none !important;
     max-width: 250px;
@@ -702,48 +710,6 @@ section, .cards-section, .section {
     margin: 0 auto;
     display: block;
   }
-</style>
-
-</section>
-
-<!-- Modal Sugerir Canción-->
-<div id="sugerir" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
-    <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
-      <button onclick="closeSugerirModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;" >X</button>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQhWlBKa-esPpjvwH7RpP0va5ITcUDhzgR1gcpdbZIVyJ-6A/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-    </div>
-</div>
-
-<script>
-  function closeSugerirModal() {
-    const modal = document.getElementById("sugerir");
-    if (modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
-
-
-
-</section>
-
-<script>
-  function closeRegalosModal() {
-    document.getElementById("regalosModal").style.display = "none";
-  }
-</script>
-<script>
-  document.getElementById("copyCbuBtn").addEventListener("click", function() {
-    const cbu = "0720069488000005057968";
-    navigator.clipboard.writeText(cbu).then(function() {
-      alert("CBU copiado al portapapeles");
-    }, function(err) {
-      alert("Error al copiar el CBU");
-    });
-  });
-</script>
-</body>
-<style>
   /* --------- MODAL STYLES --------- */
   .modal-backdrop {
     position: fixed;
@@ -794,10 +760,10 @@ section, .cards-section, .section {
     }
   }
   /* Remove top margin/padding from first content element */
-#inicio, #inicio:first-child, section:first-of-type {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+  #inicio, #inicio:first-child, section:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
   /* Extra: ensure music card text wraps and centers */
   .card-musica {
     max-width: 90%;
@@ -806,7 +772,6 @@ section, .cards-section, .section {
     padding: 1.5rem;
     overflow-wrap: break-word;
   }
-
   .card-musica button {
     width: 100%;
     max-width: 250px;
@@ -814,7 +779,6 @@ section, .cards-section, .section {
     margin-right: auto;
     display: block;
   }
-
   .content-item-fiesta {
     max-width: 320px !important;
     width: 90% !important;
@@ -850,12 +814,12 @@ section, .cards-section, .section {
   }
   @media (max-width: 576px) {
     .card-musica, .card-dresscode, .content-item-fiesta {
-      max-width: 85vw !important;
-      width: 85vw !important;
+      max-width: 90vw !important;
+      width: 90vw !important;
       margin-left: auto !important;
       margin-right: auto !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
     }
     .card-musica .card-text,
     .content-item-fiesta .card-text {
@@ -863,37 +827,31 @@ section, .cards-section, .section {
       padding-right: 0 !important;
     }
   }
-</style>
-</body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-</html>
-
-<style>
-#welcomeModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-#welcomeModal .modal-content {
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 768px) {
+  #welcomeModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
   #welcomeModal .modal-content {
     width: 90%;
-    font-size: 1rem;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
-}
+  @media (max-width: 768px) {
+    #welcomeModal .modal-content {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
 </style>
