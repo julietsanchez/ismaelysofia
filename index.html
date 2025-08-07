@@ -36,7 +36,7 @@
     </div>
 </div>
     <!-- Sección INICIO -->
-    <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+    <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box; min-height: 100vh;">
       <div style="max-width: 400px; width: 100%; margin: 0 auto; text-align: center;">
         <div style="margin-bottom: 0.1rem;">
           <img src="assets/img/adorno1.webp" alt="adorno" style="width: 100%; transform: rotate(180deg); margin-top: -25px;">
@@ -763,6 +763,40 @@
   #inicio, #inicio:first-child, section:first-of-type {
     margin-top: 0 !important;
     padding-top: 0 !important;
+  }
+  
+  /* Estilos específicos para la sección de inicio en mobile */
+  @media (max-width: 768px) {
+    #inicio {
+      min-height: 100vh !important;
+      height: 100vh !important;
+      padding: 1rem !important;
+      margin-bottom: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    
+    #inicio h1 {
+      font-size: 3.5rem !important;
+    }
+    
+    #inicio .desktop-message {
+      display: none !important;
+    }
+    
+    /* Mejorar espaciado en mobile */
+    #inicio p {
+      font-size: 1.1rem !important;
+      line-height: 1.6 !important;
+    }
+    
+    /* Ajustar el contenedor principal */
+    #inicio > div {
+      max-width: 90vw !important;
+      width: 90vw !important;
+    }
   }
   /* Extra: ensure music card text wraps and centers */
   .card-musica {
