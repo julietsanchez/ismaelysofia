@@ -67,8 +67,67 @@
   </style>
 </head>
 <body style="background-color: #FFFCF6;">
+    <!-- Cartel solo visible en Desktop -->
+<div class="only-desktop">
+    <div class="desktop-message">
+      <h1>¡Esta invitación solo está disponible en tu celular!</h1><br>
+    </div>
+  </div>
+  
+  <!-- Contenido real solo visible en Mobile -->
+  <div class="only-mobile">
+    <!-- Todo tu código actual va dentro de este div -->
+    <!-- ... -->
+  </div>
+  <style>/* Por defecto, oculta todo el contenido de mobile */
+    .only-mobile {
+      display: none !important;
+    }
+    
+    /* Muestra el cartel en desktop */
+    .only-desktop {
+      display: block !important;
+    }
+    
+    .desktop-message {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      background-color: #fff8f0;
+      color: #333;
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem;
+    }
+    
+    /* En pantallas móviles, ocultamos el cartel y mostramos el contenido real */
+    @media screen and (max-width: 768px) {
+      .only-mobile {
+        display: block !important;
+      }
+    
+      .only-desktop {
+        display: none !important;
+      }
+    }
+    }</style>
 
-    <!--aqui va el modal -->
+<div id="welcomeModal" style="position: fixed; z-index: 9999; inset: 0; background-color: #fdf4e7; overflow-y: auto; display: flex; justify-content: center; align-items: center; padding: 2rem; text-align: center;">
+    <div style="width: 100%; max-width: 320px; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 20rem;">
+        <span style="font-family: 'La Belle Aurore', cursive; font-size: 1.5rem; ; color: #bb5d45;">Bienvenidos <br> a la invitación de</span>
+        <img src="assets/img/adorno1.webp" alt="adorno" style="width: 100%; max-width: 400px; height: auto; margin: 0.5rem auto; display: block;">
+        <h1 style="font-family: 'Fraunces', serif; font-size: 3.5rem; margin: 0.5rem 0; color: #7f2f2f; font-weight: 400;">Ismael y Sofia</h1>
+        <img src="assets/img/adorno1.webp" alt="adorno invertido" style="width: 100%; max-width: 400px; height: auto; margin: 1rem auto; display: block; transform: rotate(180deg);">
+        <p style="font-family: 'La Belle Aurore', cursive; font-size: 1.5rem; margin-top: 1rem; color: #bb5d45;">La música de fondo es parte de la experiencia</p>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 1rem; overflow: visible;">
+            <button onclick="startWithMusic()" style="padding: 1rem 2rem; background-color: #da8064; border: none; color: white; border-radius: 999px; font-size: 1rem; cursor: pointer;">Ingresar con música</button>
+            <button onclick="startWithoutMusic()" style="padding: 1rem 2rem; background-color: #da8064; border: none; color: white; border-radius: 999px; font-size: 1rem; cursor: pointer;">Ingresar sin música</button>
+        </div>
+    </div>
+</div>
+
 
     <!-- Sección INICIO -->
     <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
@@ -785,3 +844,33 @@ section, .cards-section, .section {
 </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </html>
+
+<style>
+#welcomeModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#welcomeModal .modal-content {
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  #welcomeModal .modal-content {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+</style>
