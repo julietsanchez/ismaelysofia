@@ -6,7 +6,7 @@
     <title>Invitación Ismael & Sofia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=La+Belle+Aurore&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KxQ4YbsnUvRJvSLF3MI9z4s35TVv6Qyy8xgRrhRCR+muIEXlHY0XYc7o3Hd3i3PCOZuy3zPZ+v+OxVdXMPe5HA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
   <!-- Contenido real solo visible en Mobile -->
   <div class="only-mobile">
 <div id="welcomeModal" style="position: fixed; z-index: 9999; inset: 0; background-color: #fdf4e7; overflow-y: auto; display: flex; justify-content: center; align-items: center; padding: 2rem; text-align: center;">
-    <div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 20rem;">
+          <div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 20rem;">
         <span style="font-family: 'La Belle Aurore', cursive; font-size: 1.5rem; ; color: #bb5d45;">Bienvenidos <br> a la invitación de</span>
         <img src="assets/img/adorno1.webp" alt="adorno" style="width: 100%; max-width: 400px; height: auto; margin: 0.5rem auto; display: block;">
         <h1 style="font-family: 'Fraunces', serif; font-size: 3.5rem; margin: 0.5rem 0; color: #7f2f2f; font-weight: 400;">Ismael y Sofia</h1>
@@ -36,36 +36,176 @@
     </div>
 </div>
     <!-- Sección INICIO -->
-    <section id="inicio" style="background-image: url('assets/img/fondo.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: 'Fraunces', serif; color: #7f2f2f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
-      <div style="max-width: 400px; width: 100%; margin: 0 auto; text-align: center;">
-        <div style="margin-bottom: 0.1rem;">
-          <img src="assets/img/adorno1.webp" alt="adorno" style="width: 100%; transform: rotate(180deg); margin-top: -25px;">
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
-          <span style="width: 30px; height: 1px; background-color: #d79330;"></span>
-          <p style="font-family: 'La Belle Aurore', cursive; font-size: 1.8rem; color: #7f2f2f; margin: 0;">11.10.25</p>
-          <span style="width: 30px; height: 1px; background-color: #d79330;"></span>
-        </div>
-        <h1 style="font-size: 4rem; margin: 0; font-weight: 400; color: #893E3E;">Ismael</h1>
-        <div style="margin: 0.5rem 0;">
-          <span style="background-color: #D79330; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; font-family: 'Fraunces', cursive; font-size: 2rem;">&</span>
-        </div>
-        <h1 style="font-size: 4rem; margin: 0; font-weight: 400; color: #893E3E;">Sofia</h1>
-        <hr style="width: 40%; margin: 1rem auto; border: 1px solid #d79330;">
-        <div style="font-size: 1.5rem; color: #d79330;">&#10077;</div>
-        <p style="font-family: 'La Belle Aurore', cursive; font-size: 1.2rem; color: #7f2f2f; margin-bottom: 0.1rem; margin-top: 0.1rem;">
-          El amor nos unió,<br>
-          y la familia<br>
-          nos sostiene.
-        </p>
-        <div style="font-size: 1.5rem;color: #d79330;">&#10078;</div>
+  
+  <!-- Lottie Web Component -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+  <style>
+    /* Sección HERO con parallax */
+    .invitation-hero.parallax-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .parallax-background {
+      background-image: url('/assets/img/primer.jpeg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      will-change: transform;
+      transform: translateY(0);
+    }
+    .parallax-background::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+      z-index: 1;
+    }
+    .invitation-hero .content {
+      position: relative;
+      z-index: 2;
+      padding: 0 1rem;
+      margin-top: 8vh;
+    }
+    .invitation-hero .date {
+      font-family: 'La Belle Aurore', cursive;
+      letter-spacing: 2px;
+      font-size: 1.8rem;
+      opacity: 0.95;
+    }
+    .invitation-hero hr {
+      width: 120px;
+      max-width: 30vw;
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.7);
+      margin: 10px auto;
+    }
+    .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(56px, 10vw, 140px);
+      line-height: 1;
+      margin: 0.2em 0;
+    }
+    .ampersand {
+      display: inline-block;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(36px, 6vw, 80px);
+      margin: 0 0.2em;
+    }
+    .quote {
+      font-family: 'La Belle Aurore', cursive;
+      font-size: clamp(16px, 3vw, 22px);
+      opacity: 0.95;
+    }
+    .quote-secondary {
+      margin-top: 2rem;
+      line-height: 1.8;
+      font-size: 0.8rem;
+      color: white;
+      text-align: center;
+      font-family: 'La Belle Aurore', cursive;
+    }
+
+    /* Lotties superior/inferior */
+    .top-lottie-container,
+    .bottom-lottie-container {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .top-lottie-container { top: -40px; }
+    .bottom-lottie-container { bottom: -80px; }
+
+    .top-lottie, .bottom-lottie {
+      height: auto;
+    }
+    .top-lottie { transform: rotate(180deg); }
+    .bottom-lottie { transform: rotate(180deg); }
+
+    .top-lottie-desktop, .bottom-lottie-desktop { width: 600px; display: block; }
+    .top-lottie-mobile, .bottom-lottie-mobile { width: 360px; display: none; }
+
+    @media (min-width: 769px) {
+      .parallax-background { height: 120%; }
+    }
+    @media (max-width: 768px) {
+      .parallax-background { height: 100%; }
+      .top-lottie-desktop, .bottom-lottie-desktop { display: none; }
+      .top-lottie-mobile, .bottom-lottie-mobile { display: block; }
+    }
+
+    /* Chevron */
+    .chevron-down svg {
+      width: 32px; height: 32px;
+      fill: #fff; opacity: 0.9;
+      margin-top: 16px;
+      animation: chevron-bounce 2s infinite ease-in-out;
+    }
+    
+    @keyframes chevron-bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(8px);
+      }
+      60% {
+        transform: translateY(4px);
+      }
+    }
+  </style>
+
+
+
+  <!-- PRIMERA SECCIÓN (HERO) -->
+  <section class="invitation-hero parallax-section">
+    <div class="parallax-background"></div>
+
+    <!-- Lottie superior -->
+    <div class="top-lottie-container">
+      <dotlottie-wc
+        src="https://lottie.host/ec3ee05b-0f0d-4ffa-8a3f-a1557071555f/oF0dmsmJtR.lottie"
+        class="top-lottie top-lottie-desktop"
+        speed="1" autoplay loop>
+      </dotlottie-wc>
+      <dotlottie-wc
+        src="https://lottie.host/ec3ee05b-0f0d-4ffa-8a3f-a1557071555f/oF0dmsmJtR.lottie"
+        class="top-lottie top-lottie-mobile"
+        speed="1" autoplay loop>
+      </dotlottie-wc>
+    </div>
+
+    <div class="content">
+      <div class="date"><strong>11.10.25</strong></div>
+      <hr>
+      <p class="names">Ismael</p>
+      <span class="ampersand">&amp;</span>
+      <p class="names">Sofia</p>
+      <hr>
+      <div class="quote">"⁠El amor nos unió y la familia nos sostiene."</div>
+      <div class="quote-secondary">
+        Hoy celebramos no solo nuestra unión, sino el comienzo de un nuevo hogar lleno de amor, respeto y sueños compartidos.
       </div>
-      <div style="margin-top: 2rem; display: flex; justify-content: center;">
-        <svg width="36" height="24" viewBox="0 0 24 24" fill="none" stroke="#d79330" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: bounce 1.5s infinite;">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
+      <div class="chevron-down">
+        <svg viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"></path></svg>
       </div>
-    </section>
+    </div>
+  </section>
+
+
     <audio id="bgMusic" src="assets/audio/musica.mp3" loop></audio>
     <button id="muteBtn" onclick="toggleMute()" style="display:none; position: fixed; bottom: 1rem; right: 1rem; background-color: #da8064; color: white; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.2rem; cursor: pointer; z-index: 10000;">
       <svg id="music-icon" viewBox="0 0 24 24" width="24" height="24" fill="#ffffff">
@@ -91,9 +231,9 @@
         }
 
         function scrollToInicio() {
-          const inicioSection = document.getElementById('inicio');
-          if (inicioSection) {
-            inicioSection.scrollIntoView({ behavior: 'smooth' });
+          const heroSection = document.querySelector('.invitation-hero');
+          if (heroSection) {
+            heroSection.scrollIntoView({ behavior: 'smooth' });
           }
         }
 
@@ -388,8 +528,11 @@
     <div style="margin-bottom: 20px; display: flex; justify-content: center; align-items: center;">
       <lottie-player src="assets/img/Instagram.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto;" loop autoplay></lottie-player>
     </div>
-    <h3 style="font-size: 1.5rem; color: #E2962F; font-weight: bold; margin-bottom: 20px;">#ismaelysofia</h3>
-    <a href="https://www.instagram.com/explore/tags/ismaelysofia/" target="_blank" class="btn-custom btn-instagram" style="max-width: 250px; width: 100%; margin: 0 auto;">VER EN INSTAGRAM</a>
+          <h3 style="font-size: 1.5rem; color: #E2962F; font-weight: bold; margin-bottom: 20px;">@ismaysofi2025</h3>
+      <div style="display: flex; justify-content: center; margin: 20px 0 30px 0;">
+        <img src="assets/img/QR.png" style="width: 200px; height: 200px; object-fit: contain; display: block;">
+      </div>
+      <a href="https://www.instagram.com/ismaysofi2025?igsh=eGphanpjaHhxZWpq" target="_blank" class="btn-custom btn-instagram" style="max-width: 250px; width: 100%; margin: 0 auto;">VER EN INSTAGRAM</a>
   </section> 
   </div>
 
